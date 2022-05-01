@@ -34,6 +34,14 @@ main {
     height: 70vh;
 }
 
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+
+}
+
 footer>div {
     position: absolute;
     width: 100%;
