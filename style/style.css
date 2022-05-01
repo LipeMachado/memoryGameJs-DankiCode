@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2A2A2A;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header h2 {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+footer>div {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px;
+}
+
+footer div a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer div a h3 {
+    text-align: center;
+}
+
+footer div a:hover {
+    color: #D319FF;
+}
+
+div>div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer svg {
+    margin-left: 20px;
+    fill: #ffffff;
+    transition: all 0.3s;
+}
