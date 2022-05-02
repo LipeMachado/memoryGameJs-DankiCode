@@ -70,6 +70,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Conferindo pares
+    function checkForMatch() {
+        let cards = document.querySelectorAll('img')
+        const optionOneId = cardsChosenId[0]
+        const optionTwoId = cardsChosenId[1]
+
+        //Clicar duas vezes no mesmo card
+        if (optionOneId == optionTwoId) {
+            cards[optionOneId].setAttribute('src', '../images/card.png')
+            cards[optionTwoId].setAttribute('src', '../images/card.png')
+        } else if (cardsChosen[0] == cardsChosen[1]) { //Formando um par
+            cards[optionOneId].setAttribute('src', '../images/white.png')
+            cards[optionTwoId].setAttribute('src', '../images/white.png')
+            cards[optionOneId].removeEventListener('click', flipCard)
+            cards[optionTwoId].removeEventListener('click', flipCard)
+            pares.push(cardsChosen)
+        } else { // Não formou um par
+            cards[optionOneId].setAttribute('src', '../images/card.png')
+            cards[optionTwoId].setAttribute('src', '../images/card.png')
+        }
+
+        cardsChosen = []
+        cardsChosenId = []
+        resultDisplay.textContent = pares.length
+
+        if (pares.length == cardsList.length / 2) {
+            resultDisplay.textContent = "Parabéns! Você encontrou todos o pares! (Reinicie a página)"
+        }
+    }
+
     // Virando cards
     function flipCard() {
         let cardId = this.getAttribute('dataId')
