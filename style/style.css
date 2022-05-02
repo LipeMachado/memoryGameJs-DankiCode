@@ -30,8 +30,8 @@ header h2 {
 main {
     display: flex;
     justify-content: center;
+    height: 60vh;
     align-items: center;
-    height: 70vh;
 }
 
 .gridContainer {
@@ -39,16 +39,18 @@ main {
     flex-wrap: wrap;
     width: 400px;
     height: 300px;
-
+    align-items: center;
+    justify-content: center;
 }
 
-footer>div {
+footer {
     position: absolute;
     width: 100%;
     display: grid;
     justify-content: center;
     align-items: center;
-    bottom: 30px;
+    bottom: 0;
+    z-index: -99;
 }
 
 footer div a {
